@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
-#include <linux/kernel.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include "create_file.hpp"
 
 std::string create_file(std::string filename)
 {
