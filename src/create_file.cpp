@@ -13,8 +13,3 @@ std::string create_file(std::string filename)
 	open(filename.c_str(), O_CREAT);
 	return "File created succesfully.";
 }
-
-int main()
-{
-	create_file("test.txt");
-}
