@@ -1,4 +1,6 @@
 #include <fstream>
+#include <sstream>
+#include <vector>
 #include "create_file.hpp"
 
 int main()
@@ -31,7 +33,6 @@ int main()
 	
 	std::cout << "Welcome, " << userName << "\n\n";
 
-	//TODO: Parse input to see what the user wants to do	
 	
 	std::string userInput{};
 
@@ -41,6 +42,31 @@ int main()
 		std::cout << "\033[34m" << currentDir << "\033[0m$ ";
 
 		std::getline(std::cin, userInput);
+
+		std::istringstream stream(userInput);
+		std::string token {};
+
+		std::vector<std::string> tokens;
+
+		while (std::getline(stream, token, ' '))
+		{
+			// shant allow whitespaces as tokens
+			if (token == "") continue;
+			
+			tokens.emplace_back(token);
+		}
+
+
+		for (auto token : tokens)
+		{
+			std::cout << token << std::endl;
+		}
+
+		
+	//TODO: Parse input to see what the user wants to do	
+	
+		
+
 	}
 
 
