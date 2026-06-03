@@ -57,15 +57,10 @@ int main()
 		}
 
 
-		for (auto token : tokens)
+		if (tokens[0] == "mk" || tokens[0] == "touch")
 		{
-			std::cout << token << std::endl;
-		}
-
-		
-	//TODO: Parse input to see what the user wants to do	
-	
-		
+			create_file(tokens[1]);
+		}	
 
 	}
 
