@@ -1,4 +1,4 @@
-#A custom shell made for Linux environments
+# A custom shell made for Linux environments
 
 Work In Progress.
 
