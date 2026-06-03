@@ -1,7 +1,10 @@
-# custom-shell
-A shell made for Linux environments
+#A custom shell made for Linux environments
 
-This is a minimal shell:
+Work In Progress.
+
+Made by Code Gabe and Huz4y1.
+
+Features of the Shell to be implemented so far:
 
     List all the files in the current folder
 
