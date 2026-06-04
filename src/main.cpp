@@ -1,7 +1,9 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+
 #include "create_file.hpp"
+#include "ls.hpp"
 
 int main()
 {
@@ -50,6 +52,8 @@ int main()
 
 		while (std::getline(stream, token, ' '))
 		{
+			//TODO: Fix problem where entering nothing makes program crash
+			
 			// shant allow whitespaces as tokens
 			if (token == "") continue;
 			
@@ -57,16 +61,13 @@ int main()
 		}
 
 
-		for (auto token : tokens)
-		{
-			std::cout << token << std::endl;
-		}
+		/////////////////////////
+		// Iterating over tokens //
+		/////////////////////////
 
-		
-	//TODO: Parse input to see what the user wants to do	
+		if (tokens[0] == "mk" || tokens[0] == "touch") create_file(tokens[1]);
+		else if (tokens[0] == "ls") ls();
 	
-		
-
 	}
 
 
