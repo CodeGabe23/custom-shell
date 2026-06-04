@@ -5,6 +5,7 @@
 #include "create_file.hpp"
 #include "ls.hpp"
 #include "rm.hpp"
+#include "rmdir.hpp"
 
 int main()
 {
@@ -68,9 +69,10 @@ int main()
 		
 		if (tokens.size() == 0) continue;
 
-		if (tokens[0] == "mk" || tokens[0] == "touch") create_file(tokens[1]);
+		if (tokens[0] == "touch") create_file(tokens[1]);
 		else if (tokens[0] == "ls") ls();
 		else if (tokens[0] == "rm") rm(tokens[1]);
+		else if (tokens[0] == "rmdir") rmdir(tokens[1]);
 	}
 
 
