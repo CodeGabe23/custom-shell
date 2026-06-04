@@ -64,10 +64,11 @@ int main()
 		/////////////////////////
 		// Iterating over tokens //
 		/////////////////////////
+		
+		if (tokens.size() == 0) continue;
 
 		if (tokens[0] == "mk" || tokens[0] == "touch") create_file(tokens[1]);
 		else if (tokens[0] == "ls") ls();
-	
 	}
 
 
