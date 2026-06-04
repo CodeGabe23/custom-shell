@@ -14,4 +14,6 @@ Features of the Shell to be implemented so far:
 
     Remove a folder.
 
+    Remove a file.
+
     Create new files.
