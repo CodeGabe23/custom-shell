@@ -5,7 +5,6 @@
 using namespace std;
 using namespace std::filesystem;
 
-// TODO: complete
 
 // TODO: add flags functionality
 void ls()
