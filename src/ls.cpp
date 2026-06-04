@@ -2,18 +2,27 @@
 #include <iostream>
 #include <string>
 
-// TODO: fix
-using fs = std::filesystem;
+using namespace std;
+using namespace std::filesystem;
 
 // TODO: complete
 
 // TODO: add flags functionality
 void ls()
 {
-	path directoryPath = "";
-
-	for (const auto& entry : directory_iterator(directoryPath))
+	path directoryPath = current_path();
+	
+	
+	if (exists(directoryPath) && is_directory(directoryPath)) 
 	{
-		std::cout << entry.filename() << "\n";
+		for (const auto& entry:
+				directory_iterator(directoryPath))
+		{
+			string file = entry.path().filename();
+			cout << file.substr(0, file.size())  << " ";
+		}
 	}
+
+
+	std::cout << "\n";
 }
