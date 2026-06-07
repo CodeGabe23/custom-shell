@@ -1,6 +1,6 @@
 # A custom shell made for Linux environments
 
-Work In Progress.
+Bacasly done m8.
 
 Made by Code Gabe and Huz4y1.
 

@@ -6,6 +6,7 @@
 #include "ls.hpp"
 #include "rm.hpp"
 #include "rmdir.hpp"
+#include "cd.hpp"
 
 int main()
 {
@@ -42,8 +43,9 @@ int main()
 
 	while (true)
 	{
+
 		std::cout << "\033[32m" << userName << "@" << hostName << "\033[0m:";
-		std::cout << "\033[34m" << currentDir << "\033[0m$ ";
+		std::cout << "\033[34m" << std::filesystem::current_path().string() << "\033[0m$ ";
 
 		std::getline(std::cin, userInput);
 
@@ -73,6 +75,7 @@ int main()
 		else if (tokens[0] == "ls") ls();
 		else if (tokens[0] == "rm") rm(tokens[1]);
 		else if (tokens[0] == "rmdir") rmdir(tokens[1]);
+		else if (tokens[0] == "cd") cd(tokens[1]);
 	}
 
 
