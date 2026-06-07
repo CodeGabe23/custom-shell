@@ -4,7 +4,7 @@ Work In Progress.
 
 Made by Code Gabe and Huz4y1.
 
-Features of the Shell to be implemented so far:
+Features of the Shell to be implemented:
 
     List all the files in the current folder
 
